@@ -110,26 +110,20 @@ class GameSceneHelper: SKScene {
     func loadGameLayers() {
         for gameLayer in GameLayer.allLayers {
             // Find the node in the scene file
-            let foundNodes = self[
-                gameLayer.nodeName
-                ]
+            let foundNodes = self[gameLayer.nodeName]
             let layerNode = foundNodes.first!
 
             // Set the zPosition - should be the same as the scene file, but worth setting
             layerNode.zPosition = gameLayer.rawValue
 
             // Store Game layer node
-            gameLayerNodes[
-                gameLayer
-                ] = layerNode
+            gameLayerNodes[gameLayer] = layerNode
         }
     }
 
     // Layout the HUD elements to fit the screen
     func layoutHUD() {
-        let hudNode = gameLayerNodes[
-            .Hud
-            ]!
+        let hudNode = gameLayerNodes[.Hud]!
 
         // Position Base Health label
         if let baseLabel = hudNode.childNode(withName: "BaseLabel") as? SKLabelNode {
@@ -241,8 +235,6 @@ class GameSceneHelper: SKScene {
 
     func addNode(node: SKNode,
                  toGameLayer: GameLayer) {
-        gameLayerNodes[
-            toGameLayer
-            ]!.addChild(node)
+        gameLayerNodes[toGameLayer]!.addChild(node)
     }
 }

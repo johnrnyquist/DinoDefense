@@ -39,9 +39,7 @@ class WaveManager {
         self.newWaveHandler(currentWave + 1)
 
         // 3
-        let wave = waves[
-            currentWave
-            ]
+        let wave = waves[currentWave]
         // 4
         currentWaveDinosaurCount = wave.dinosaurCount
         for m in 1...wave.dinosaurCount {

@@ -33,9 +33,7 @@ class GameScene: GameSceneHelper {
 
         loadTowerSelectorNodes()
 
-        let obstacleSpriteNodes = self[
-            "Sprites/Obstacle_*"
-            ] as! [SKSpriteNode]
+        let obstacleSpriteNodes = self["Sprites/Obstacle_*"] as! [SKSpriteNode]
         for obstacle in obstacleSpriteNodes {
             addObstacle(withNode: obstacle)
         }
@@ -218,9 +216,7 @@ class GameScene: GameSceneHelper {
             return
         }
 
-        let touchedNode = touchedNodes[
-            0
-            ]
+        let touchedNode = touchedNodes[0]
 
         if placingTower {
             let touchedNodeName = touchedNode.name!
@@ -469,9 +465,7 @@ class GameScene: GameSceneHelper {
             // 3
             towerSelectorNode.position = position
             // 4
-            gameLayerNodes[
-                .Hud
-                ]!.addChild(towerSelectorNode)
+            gameLayerNodes[.Hud]!.addChild(towerSelectorNode)
             // 5
             towerSelectorNode.show()
         }

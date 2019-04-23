@@ -78,9 +78,7 @@ class AnimationComponent: GKComponent {
         if currentAnimation != nil && currentAnimation!.animationState == animationState { return }
 
         // 4
-        guard let animation = animations[
-            animationState
-            ] else {
+        guard let animation = animations[animationState] else {
             print("Unknown animation for state \(animationState.rawValue)")
             return
         }

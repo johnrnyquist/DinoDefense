@@ -164,20 +164,14 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
         let textureAtlas = SKTextureAtlas(named: dinosaurType.rawValue)
         var animations = [AnimationState: Animation]()
 
-        animations[
-            .Walk
-            ] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
+        animations[.Walk] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
                                                       withImageIdentifier: "Walk",
                                                       forAnimationState: .Walk)
-        animations[
-            .Hit
-            ] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
+        animations[.Hit] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
                                                       withImageIdentifier: "Hurt",
                                                       forAnimationState: .Hit,
                                                       repeatTexturesForever: false)
-        animations[
-            .Dead
-            ] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
+        animations[.Dead] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
                                                       withImageIdentifier: "Dead",
                                                       forAnimationState: .Dead,
                                                       repeatTexturesForever: false)

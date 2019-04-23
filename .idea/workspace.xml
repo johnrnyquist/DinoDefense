@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6f6a10-3351-4e6a-b0fb-61b826da125f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/FiringComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/FiringComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/GameScene.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameScene.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/GameState.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameState.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/GameViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/HealthComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/HealthComponent.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/ShadowComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ShadowComponent.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/SpriteComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/SpriteComponent.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/Utils.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Utils.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/Waves.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Waves.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/DinoDefense-akciauxbrayvyegkeprkmtxozofv/Build/Intermediates.noindex/" />
@@ -48,10 +34,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DinoDefense/TowerEntity.swift">
+        <entry file="file://$PROJECT_DIR$/DinoDefense/Waves.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+            <state relative-caret-position="199">
+              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -89,14 +75,14 @@
       <list>
         <option value="$PROJECT_DIR$/DinoDefense/GameViewController.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/Utils.swift" />
-        <option value="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" />
-        <option value="$PROJECT_DIR$/DinoDefense/GameScene.swift" />
-        <option value="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/AppDelegate.swift" />
-        <option value="$PROJECT_DIR$/DinoDefense/Waves.swift" />
-        <option value="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/GameScene.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/Waves.swift" />
       </list>
     </option>
   </component>
@@ -191,17 +177,25 @@
       <option name="presentableId" value="Default" />
       <updated>1555973133202</updated>
       <workItem from="1555973135623" duration="9442000" />
-      <workItem from="1556046231878" duration="388000" />
+      <workItem from="1556046231878" duration="1381000" />
     </task>
+    <task id="LOCAL-00001" summary="Formatting-only commit">
+      <created>1556046868954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556046868954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9830000" />
+    <option name="totallyTimeSpent" value="10823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49737534" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49737534" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" sideWeight="0.5026247" side_tool="true" weight="0.24964234" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -213,7 +207,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32939634" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3792651" />
@@ -229,6 +223,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Formatting-only commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting-only commit" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -239,60 +239,32 @@
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>65</line>
+          <line>63</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>290</line>
+          <line>286</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>167</line>
+          <line>165</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>149</line>
+          <line>147</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DinoDefense/GameViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/AppCode2019.1/ModuleCache/10E1001/5.0.1/x86_64/iphonesimulator12.2/Swift/Collection.HashedCollections.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/AnimationComponent.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/GameState.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/Utils.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -303,34 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/AppDelegate.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/GameScene.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="243" column="28" selection-start-line="243" selection-start-column="28" selection-end-line="243" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/Waves.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -338,17 +282,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift">
+    <entry file="file://$PROJECT_DIR$/DinoDefense/TowerEntity.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="1962">
+          <caret line="109" column="25" lean-forward="true" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/TowerEntity.swift">
+    <entry file="file://$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+        <state relative-caret-position="-213" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/SpriteComponent.swift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/ShadowComponent.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/FiringComponent.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-682" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/HealthComponent.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/GameState.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-826" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/GameViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/Utils.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/AnimationComponent.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="173" column="24" selection-start-line="173" selection-start-column="24" selection-end-line="173" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/GameScene.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="467" column="31" selection-start-line="467" selection-start-column="31" selection-end-line="467" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/Waves.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
         </state>
       </provider>
     </entry>
