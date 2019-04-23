@@ -170,7 +170,8 @@ class GameScene: GameSceneHelper {
         }
 
         // 1
-        let ySortedEntities = Array<GKEntity>(entities).sorted { ent1, ent2 in
+        let ySortedEntities = Array<GKEntity>(entities).sorted { ent1,
+                                                                 ent2 in
             let nodeA = ent1.component(ofType: SpriteComponent.self)!.node
             let nodeB = ent2.component(ofType: SpriteComponent.self)!.node
             return nodeA.position.y > nodeB.position.y
@@ -193,7 +194,8 @@ class GameScene: GameSceneHelper {
         }
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?) {
         guard let touch = touches.first else {
             return
         }
@@ -303,7 +305,8 @@ class GameScene: GameSceneHelper {
         dinosaur.animationComponent.requestedAnimationState = .Walk
     }
 
-    func addTower(towerType: TowerType, position: CGPoint) {
+    func addTower(towerType: TowerType,
+                  position: CGPoint) {
         if gold < towerType.cost {
             self.run(SKAction.playSoundFileNamed("NoBuildTower.mp3",
                                                  waitForCompletion: false))
@@ -347,7 +350,8 @@ class GameScene: GameSceneHelper {
         addObstaclesToObstacleGraph(newObstacles: obstacles)
     }
 
-    func setDinosaurOnPath(dinosaur: DinosaurEntity, toPoint point: CGPoint) {
+    func setDinosaurOnPath(dinosaur: DinosaurEntity,
+                           toPoint point: CGPoint) {
         let dinosaurNode = dinosaur.spriteComponent.node
 
         // 1
@@ -445,9 +449,7 @@ class GameScene: GameSceneHelper {
             // 3
             let towerSelectorNode = (towerSelectorNodeScene.childNode(withName: "MainNode"))!.copy() as! TowerSelectorNode
             // 4
-            towerSelectorNode.setTower(towerType: TowerType.allValues[
-                t
-                ],
+            towerSelectorNode.setTower(towerType: TowerType.allValues[t],
                                        angle: ((2 * π) / CGFloat(towerTypeCount)) * CGFloat(t))
             // 5
             towerSelectorNodes.append(towerSelectorNode)

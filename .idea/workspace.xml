@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6f6a10-3351-4e6a-b0fb-61b826da125f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/FiringComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/FiringComponent.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/GameScene.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameScene.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameState.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameState.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/HealthComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/HealthComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/ShadowComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ShadowComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/SpriteComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/SpriteComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/Utils.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Utils.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/Waves.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Waves.swift" afterDir="false" />
     </list>
@@ -33,10 +48,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift">
+        <entry file="file://$PROJECT_DIR$/DinoDefense/TowerEntity.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="184" column="34" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+            <state relative-caret-position="415">
+              <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -74,13 +89,14 @@
       <list>
         <option value="$PROJECT_DIR$/DinoDefense/GameViewController.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/Utils.swift" />
-        <option value="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/GameScene.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/AppDelegate.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/Waves.swift" />
         <option value="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" />
+        <option value="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" />
       </list>
     </option>
   </component>
@@ -95,8 +111,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,6 +124,12 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="DinoDefense" type="1d218c8b:XcodeProjectNode" />
               <item name="DinoDefense" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="DinoDefense" type="1d218c8b:XcodeProjectNode" />
+              <item name="DinoDefense" type="fcab9f18:XcodeViewNode" />
+              <item name="Behaviors" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -136,6 +158,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Swift" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -167,26 +190,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555973133202</updated>
-      <workItem from="1555973135623" duration="9148000" />
+      <workItem from="1555973135623" duration="9442000" />
+      <workItem from="1556046231878" duration="388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9148000" />
+    <option name="totallyTimeSpent" value="9830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49868765" visible="true" weight="0.24964234" />
-      <window_info id="Structure" order="1" sideWeight="0.5013123" side_tool="true" visible="true" weight="0.24964234" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.3792651" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49737534" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" sideWeight="0.5026247" side_tool="true" weight="0.24964234" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939634" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -194,12 +212,18 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Learn" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3792651" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Learn" order="3" />
+      <window_info anchor="right" x="0" y="0" width="310" height="677" id="Documentation" order="4" side_tool="true" weight="0.3297568" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +234,7 @@
       <breakpoints>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/Waves.swift</url>
-          <line>34</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -220,7 +244,7 @@
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>288</line>
+          <line>290</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -248,13 +272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/TowerEntity.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
@@ -286,13 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DinoDefense/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -316,8 +326,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="184" column="34" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+        <state relative-caret-position="389">
+          <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DinoDefense/TowerEntity.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
         </state>
       </provider>
     </entry>

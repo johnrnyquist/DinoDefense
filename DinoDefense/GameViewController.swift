@@ -10,41 +10,39 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    resetGame()
-  }
-  
-  func resetGame() {
-    if let scene = GameScene(fileNamed:"GameScene") {
-      // Configure the view.
-      let skView = self.view as! SKView
-      skView.showsFPS = false
-      skView.showsNodeCount = false
-      skView.showsPhysics = false
-      
-      /* Sprite Kit applies additional optimizations to improve rendering performance */
-      skView.ignoresSiblingOrder = true
-      
-      /* Set the scale mode to scale to fit the window */
-        scene.scaleMode = .aspectFill
-      
-      skView.presentScene(scene)
-    }
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-  override var shouldAutorotate: Bool {
-    return super.shouldAutorotate
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    
-  }
-  
-  func prefersStatusBarHidden() -> Bool {
-    return true
-  }
+        resetGame()
+    }
+
+    func resetGame() {
+        if let scene = GameScene(fileNamed: "GameScene") {
+            // Configure the view.
+            let skView = self.view as! SKView
+            skView.showsFPS = false
+            skView.showsNodeCount = false
+            skView.showsPhysics = false
+
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = true
+
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFill
+
+            skView.presentScene(scene)
+        }
+    }
+
+    override var shouldAutorotate: Bool {
+        return super.shouldAutorotate
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

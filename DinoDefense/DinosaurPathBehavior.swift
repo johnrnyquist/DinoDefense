@@ -10,27 +10,26 @@ import Foundation
 import GameplayKit
 
 class DinosaurPathBehavior: GKBehavior {
-  
-  static func pathBehavior(forAgent agent: GKAgent,
-    onPath path: GKPath,
-    avoidingObstacles obstacles: [GKPolygonObstacle])
-    -> DinosaurPathBehavior {
-      
-      let behavior = DinosaurPathBehavior()
-      
+    static func pathBehavior(forAgent agent: GKAgent,
+                             onPath path: GKPath,
+                             avoidingObstacles obstacles: [GKPolygonObstacle]) -> DinosaurPathBehavior {
+
+        let behavior = DinosaurPathBehavior()
+
         behavior.setWeight(0.5,
                            for: GKGoal(toReachTargetSpeed: agent.maxSpeed))
         behavior.setWeight(1.0,
-                           for: GKGoal(toAvoid: obstacles, maxPredictionTime: 0.5))
+                           for: GKGoal(toAvoid: obstacles,
+                                       maxPredictionTime: 0.5))
         behavior.setWeight(1.0,
-                           for: GKGoal(toFollow: path, maxPredictionTime: 0.5,
-          forward: true))
+                           for: GKGoal(toFollow: path,
+                                       maxPredictionTime: 0.5,
+                                       forward: true))
         behavior.setWeight(1.0,
-                           for: GKGoal(toStayOn: path, maxPredictionTime: 0.5))
-      
-      return behavior
-      
-  }
-  
+                           for: GKGoal(toStayOn: path,
+                                       maxPredictionTime: 0.5))
+
+        return behavior
+    }
 }
 

@@ -10,50 +10,53 @@ import Foundation
 import GameplayKit
 
 class GameSceneState: GKState {
-  unowned let scene: GameScene
-  init(scene: GameScene) {
-    self.scene = scene
-  }
-  
+    unowned let scene: GameScene
+
+    init(scene: GameScene) {
+        self.scene = scene
+    }
 }
 
 class GameSceneReadyState: GameSceneState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-    return stateClass == GameSceneActiveState.self
-  }
+        return stateClass == GameSceneActiveState.self
+    }
 }
 
 class GameSceneActiveState: GameSceneState {
     override func didEnter(from previousState: GKState?) {
-    // Hide the ready state
-    // Ready
+        // Hide the ready state
+        // Ready
         scene.showReady(show: false)
-    
-    // Start the first wave
-    scene.startFirstWave()
-  }
+
+        // Start the first wave
+        scene.startFirstWave()
+    }
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-    return stateClass == GameSceneWinState.self || stateClass == GameSceneLoseState.self
-  }
+        return stateClass == GameSceneWinState.self || stateClass == GameSceneLoseState.self
+    }
 }
 
 class GameSceneWinState: GameSceneState {
     override func didEnter(from previousState: GKState?) {
-    // Show the win!
-    scene.showWin()
-  }
+        // Show the win!
+        scene.showWin()
+    }
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-    return stateClass == GameSceneReadyState.self
-  }
+        return stateClass == GameSceneReadyState.self
+    }
 }
 
 class GameSceneLoseState: GameSceneState {
     override func didEnter(from previousState: GKState?) {
-    // Show the lose!
-    scene.showLose()
-  }
+        // Show the lose!
+        scene.showLose()
+    }
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-    return stateClass == GameSceneReadyState.self
-  }
+        return stateClass == GameSceneReadyState.self
+    }
 }
 
