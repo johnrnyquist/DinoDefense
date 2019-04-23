@@ -33,7 +33,7 @@ extension SKNode {
   func rotateToFaceNode(targetNode: SKNode, sourceNode: SKNode) {
     print("Source position: \(sourceNode.position)")
     print("Target position: \(targetNode.position)")
-    let angle = atan2(targetNode.position.y - sourceNode.position.y, targetNode.position.x - sourceNode.position.x) - CGFloat(M_PI/2)
+    let angle = atan2(targetNode.position.y - sourceNode.position.y, targetNode.position.x - sourceNode.position.x) - CGFloat(Double.pi/2)
     print("Angle: \(angle)")
     self.run(SKAction.rotate(toAngle: angle, duration: 0))
   }
@@ -51,7 +51,7 @@ func distanceBetween(nodeA: SKNode, nodeB: SKNode) -> CGFloat {
 }
 
 // MARK: Degree and radian extensions
-let π = CGFloat(M_PI)
+let π = CGFloat(Double.pi)
 public extension Int {
   func degreesToRadians() -> CGFloat {
     return CGFloat(self).degreesToRadians()

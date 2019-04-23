@@ -170,7 +170,7 @@ class GameScene: GameSceneHelper {
         }
 
         // 1
-        var ySortedEntities = Array<GKEntity>(entities).sorted { ent1, ent2 in
+        let ySortedEntities = Array<GKEntity>(entities).sorted { ent1, ent2 in
             let nodeA = ent1.component(ofType: SpriteComponent.self)!.node
             let nodeB = ent2.component(ofType: SpriteComponent.self)!.node
             return nodeA.position.y > nodeB.position.y

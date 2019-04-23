@@ -40,6 +40,7 @@ class HealthComponent: GKComponent {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @discardableResult
   func takeDamage(damage: Int) -> Bool {
     health = max(health - damage, 0)
     

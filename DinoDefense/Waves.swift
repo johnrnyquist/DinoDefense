@@ -29,6 +29,7 @@ class WaveManager {
         self.newDinosaurHandler = newDinosaurHandler
     }
 
+    @discardableResult
     func startNextWave() -> Bool {
         // 1
         if waves.count <= currentWave {
@@ -56,6 +57,7 @@ class WaveManager {
         return false
     }
 
+    @discardableResult
     func removeDinosaurFromWave() -> Bool {
         currentWaveDinosaurCount -= 1
         if currentWaveDinosaurCount <= 0 {

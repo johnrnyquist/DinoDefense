@@ -111,7 +111,7 @@ class GameSceneHelper: SKScene  {
       musicPlayer.play()
     }
     catch {
-      fatalError ("Error loading \(musicFileURL): \(error)")
+      fatalError ("Error loading \(String(describing: musicFileURL)): \(error)")
     }
   }
   
@@ -135,19 +135,25 @@ class GameSceneHelper: SKScene  {
     let hudNode = gameLayerNodes[.Hud]!
     
     // Position Base Health label
-    baseLabel = hudNode.childNode(withName: "BaseLabel") as! SKLabelNode
-    baseLabel.position = CGPoint(x: baseLabel.position.x, y: (self.size.height - baseLabel.position.y) * sceneScale)
-    baseLabel.alpha = 0
-    
+    if let baseLabel = hudNode.childNode(withName: "BaseLabel") as? SKLabelNode {
+      self.baseLabel = baseLabel
+      self.baseLabel.position = CGPoint(x: baseLabel.position.x, y: (self.size.height - baseLabel.position.y) * sceneScale)
+      self.baseLabel.alpha = 0
+    }
+
     // Position Wave label
-    waveLabel = hudNode.childNode(withName: "WaveLabel") as! SKLabelNode
-    waveLabel.position = CGPoint(x: waveLabel.position.x, y: (self.size.height - waveLabel.position.y) * sceneScale)
-    waveLabel.alpha = 0
-    
+    if let waveLabel = hudNode.childNode(withName: "WaveLabel") as? SKLabelNode {
+      self.waveLabel = waveLabel
+      self.waveLabel.position = CGPoint(x: waveLabel.position.x, y: (self.size.height - waveLabel.position.y) * sceneScale)
+      self.waveLabel.alpha = 0
+    }
+
     // Position Gold label
-    goldLabel = hudNode.childNode(withName: "GoldLabel") as! SKLabelNode
-    goldLabel.position = CGPoint(x: goldLabel.position.x, y: (self.size.height - goldLabel.position.y) * sceneScale)
-    goldLabel.alpha = 0
+    if let goldLabel =  hudNode.childNode(withName: "GoldLabel") as? SKLabelNode {
+      self.goldLabel = goldLabel
+      self.goldLabel.position = CGPoint(x: goldLabel.position.x, y: (self.size.height - goldLabel.position.y) * sceneScale)
+      self.goldLabel.alpha = 0
+    }
   }
   
   // Update the hud labels
@@ -161,17 +167,23 @@ class GameSceneHelper: SKScene  {
     // Ready
     let readyScenePath: String = Bundle.main.path(forResource: "ReadyScene", ofType: "sks")!
     let readyScene = NSKeyedUnarchiver.unarchiveObject(withFile: readyScenePath) as! SKScene
-    readyScreen = (readyScene.childNode(withName: "MainNode"))!.copy() as! ReadyNode
-    
+    if let readyScreen = (readyScene.childNode(withName: "MainNode"))!.copy() as? ReadyNode {
+      self.readyScreen = readyScreen
+    }
+
     // Win
     let winScenePath: String = Bundle.main.path(forResource: "WinScene", ofType: "sks")!
     let winScene = NSKeyedUnarchiver.unarchiveObject(withFile: winScenePath) as! SKScene
-    winScreen = (winScene.childNode(withName: "MainNode"))!.copy() as! WinNode
+    if let winScreen =  (winScene.childNode(withName: "MainNode"))!.copy() as? WinNode {
+      self.winScreen = winScreen
+    }
     
     // Lose
     let loseScenePath: String = Bundle.main.path(forResource: "LoseScene", ofType: "sks")!
     let loseScene = NSKeyedUnarchiver.unarchiveObject(withFile: loseScenePath) as! SKScene
-    loseScreen = (loseScene.childNode(withName: "MainNode"))!.copy() as! LoseNode
+    if let loseScreen =  (loseScene.childNode(withName: "MainNode"))!.copy() as? LoseNode {
+      self.loseScreen = loseScreen
+    }
   }
     
   // Show the state screens
