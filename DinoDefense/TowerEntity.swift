@@ -59,20 +59,16 @@ class TowerEntity: GKEntity {
     init(towerType: TowerType) {
         // Store the TowerType
         self.towerType = towerType
-
         super.init()
-
         let textureAtlas = SKTextureAtlas(named: towerType.rawValue)
         let defaultTexture = textureAtlas.textureNamed("Idle__000")
         let textureSize = CGSize(width: 98,
                                  height: 140)
-
         // Add the SpriteComponent
         spriteComponent = SpriteComponent(entity: self,
                                           texture: defaultTexture,
                                           size: textureSize)
         addComponent(spriteComponent)
-
         // Add the ShadowComponent
         let shadowSize = CGSize(width: 98,
                                 height: 44)
@@ -80,13 +76,11 @@ class TowerEntity: GKEntity {
                                           offset: CGPoint(x: 0.0,
                                                           y: -textureSize.height / 2 + shadowSize.height / 2))
         addComponent(shadowComponent)
-
         // Add the AnimationComponent
         animationComponent = AnimationComponent(node: spriteComponent.node,
                                                 textureSize: textureSize,
                                                 animations: loadAnimations())
         addComponent(animationComponent)
-
         firingComponent = FiringComponent(towerType: towerType,
                                           parentNode: spriteComponent.node)
         addComponent(firingComponent)
@@ -99,14 +93,12 @@ class TowerEntity: GKEntity {
     func loadAnimations() -> [AnimationState: Animation] {
         let textureAtlas = SKTextureAtlas(named: towerType.rawValue)
         var animations = [AnimationState: Animation]()
-
         animations[.Idle] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
-                                                      withImageIdentifier: "Idle",
-                                                      forAnimationState: .Idle)
+                                                                  withImageIdentifier: "Idle",
+                                                                  forAnimationState: .Idle)
         animations[.Attacking] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
-                                                      withImageIdentifier: "Attacking",
-                                                      forAnimationState: .Attacking)
-
+                                                                       withImageIdentifier: "Attacking",
+                                                                       forAnimationState: .Attacking)
         return animations
     }
 }

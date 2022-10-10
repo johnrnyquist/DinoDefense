@@ -59,10 +59,10 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
     var hasBeenSlowed = false
 
     // 2
+
     init(dinosaurType: DinosaurType) {
         self.dinosaurType = dinosaurType
         super.init()
-
         // 3
         let size: CGSize
         switch dinosaurType {
@@ -73,35 +73,29 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
                 size = CGSize(width: 142,
                               height: 74)
         }
-
         // 4
         let textureAtlas = SKTextureAtlas(named: dinosaurType.rawValue)
         let defaultTexture = textureAtlas.textureNamed("Walk__01.png")
-
         // 5
         spriteComponent = SpriteComponent(entity: self,
                                           texture: defaultTexture,
                                           size: size)
         addComponent(spriteComponent)
-
         let shadowSize = CGSize(width: size.width,
                                 height: size.height * 0.3)
         shadowComponent = ShadowComponent(size: shadowSize,
                                           offset: CGPoint(x: 0.0,
                                                           y: -size.height / 2 + shadowSize.height / 2))
         addComponent(shadowComponent)
-
         animationComponent = AnimationComponent(node: spriteComponent.node,
                                                 textureSize: size,
                                                 animations: loadAnimations())
         addComponent(animationComponent)
-
         healthComponent = HealthComponent(parentNode: spriteComponent.node,
                                           barWidth: size.width,
                                           barOffset: size.height,
                                           health: dinosaurType.health)
         addComponent(healthComponent)
-
         if dinosaurType == .Triceratops {
             agent = DinosaurAgent()
             agent!.delegate = self
@@ -120,7 +114,7 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
 
     func agentWillUpdate(_ agent: GKAgent) {
         self.agent!.position = simd_float2(x: Float(spriteComponent.node.position.x),
-                                      y: Float(spriteComponent.node.position.y))
+                                           y: Float(spriteComponent.node.position.y))
     }
 
     func agentDidUpdate(_ agent: GKAgent) {
@@ -162,18 +156,17 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
     func loadAnimations() -> [AnimationState: Animation] {
         let textureAtlas = SKTextureAtlas(named: dinosaurType.rawValue)
         var animations = [AnimationState: Animation]()
-
         animations[.Walk] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
-                                                      withImageIdentifier: "Walk",
-                                                      forAnimationState: .Walk)
+                                                                  withImageIdentifier: "Walk",
+                                                                  forAnimationState: .Walk)
         animations[.Hit] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
-                                                      withImageIdentifier: "Hurt",
-                                                      forAnimationState: .Hit,
-                                                      repeatTexturesForever: false)
+                                                                 withImageIdentifier: "Hurt",
+                                                                 forAnimationState: .Hit,
+                                                                 repeatTexturesForever: false)
         animations[.Dead] = AnimationComponent.animationFromAtlas(atlas: textureAtlas,
-                                                      withImageIdentifier: "Dead",
-                                                      forAnimationState: .Dead,
-                                                      repeatTexturesForever: false)
+                                                                  withImageIdentifier: "Dead",
+                                                                  forAnimationState: .Dead,
+                                                                  repeatTexturesForever: false)
         return animations
     }
 }

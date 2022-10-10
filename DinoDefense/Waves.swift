@@ -34,10 +34,8 @@ class WaveManager {
         if waves.count <= currentWave {
             return true
         }
-
         // 2
         self.newWaveHandler(currentWave + 1)
-
         // 3
         let wave = waves[currentWave]
         // 4
@@ -46,10 +44,8 @@ class WaveManager {
             // 5
             delay(wave.dinosaurDelay * Double(m)) { self.newDinosaurHandler(wave.dinosaurType) }
         }
-
         // 6
         currentWave += 1
-
         // 7
         return false
     }

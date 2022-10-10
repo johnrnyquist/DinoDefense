@@ -33,10 +33,10 @@ class AnimationComponent: GKComponent {
     var requestedAnimationState: AnimationState?
 
     // 4
+
     init(node: SKSpriteNode,
          textureSize: CGSize,
          animations: [AnimationState: Animation]) {
-
         self.node = node
         self.animations = animations
         super.init()
@@ -48,7 +48,6 @@ class AnimationComponent: GKComponent {
 
     override func update(deltaTime: TimeInterval) {
         super.update(deltaTime: deltaTime)
-
         if let animationState = requestedAnimationState {
             runAnimationForAnimationState(animationState: animationState)
             requestedAnimationState = nil
@@ -59,33 +58,29 @@ class AnimationComponent: GKComponent {
                                   withImageIdentifier identifier: String,
                                   forAnimationState animationState: AnimationState,
                                   repeatTexturesForever: Bool = true) -> Animation {
-
-        let textures = atlas.textureNames.filter { $0.hasPrefix("\(identifier)_") }.sorted { $0 < $1 }.map { atlas.textureNamed($0) }
-
+        let textures = atlas.textureNames
+                            .filter { $0.hasPrefix("\(identifier)_") }
+                            .sorted { $0 < $1 }
+                            .map { atlas.textureNamed($0) }
         return Animation(animationState: animationState,
                          textures: textures,
                          repeatTexturesForever: repeatTexturesForever)
     }
 
     private func runAnimationForAnimationState(animationState: AnimationState) {
-
         // 1
         let actionKey = "Animation"
         // 2
         let timePerFrame = TimeInterval(1.0 / 30.0)
-
         // 3
         if currentAnimation != nil && currentAnimation!.animationState == animationState { return }
-
         // 4
         guard let animation = animations[animationState] else {
             print("Unknown animation for state \(animationState.rawValue)")
             return
         }
-
         // 5
         node.removeAction(forKey: actionKey)
-
         // 6
         let texturesAction: SKAction
         if animation.repeatTexturesForever {
@@ -95,11 +90,9 @@ class AnimationComponent: GKComponent {
             texturesAction = SKAction.animate(with: animation.textures,
                                               timePerFrame: timePerFrame)
         }
-
         // 7
         node.run(texturesAction,
                  withKey: actionKey)
-
         // 8
         currentAnimation = animation
     }

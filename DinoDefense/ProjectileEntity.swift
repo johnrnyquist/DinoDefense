@@ -14,7 +14,6 @@ class ProjectileEntity: GKEntity {
 
     init(towerType: TowerType) {
         super.init()
-
         let texture = SKTexture(imageNamed: "\(towerType.rawValue)Projectile")
         spriteComponent = SpriteComponent(entity: self,
                                           texture: texture,

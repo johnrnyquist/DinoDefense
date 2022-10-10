@@ -28,30 +28,23 @@ class FiringComponent: GKComponent {
 
     override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
-
         guard let target = currentTarget else { return }
-
         timeTillNextShot -= seconds
         if timeTillNextShot > 0 { return }
-        
         timeTillNextShot = towerType.fireRate
-
         // 1
         let projectile = ProjectileEntity(towerType: towerType)
         let projectileNode = projectile.spriteComponent.node
         projectileNode.position = CGPoint(x: 0.0,
                                           y: 50.0)
         parentNode.addChild(projectileNode)
-
         // 2
         let targetNode = target.spriteComponent.node
         projectileNode.rotateToFaceNode(targetNode: targetNode,
                                         sourceNode: parentNode)
-
         // 3
         let fireVector = CGVector(dx: targetNode.position.x - parentNode.position.x,
                                   dy: targetNode.position.y - parentNode.position.y)
-
         // 4
         let soundAction = SKAction.playSoundFileNamed("\(towerType.rawValue)Fire.mp3",
                                                       waitForCompletion: false)

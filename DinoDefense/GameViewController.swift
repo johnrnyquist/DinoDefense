@@ -12,7 +12,6 @@ import SpriteKit
 class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
         resetGame()
     }
 
@@ -23,13 +22,10 @@ class GameViewController: UIViewController {
             skView.showsFPS = false
             skView.showsNodeCount = false
             skView.showsPhysics = false
-
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
-
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
-
             skView.presentScene(scene)
         }
     }

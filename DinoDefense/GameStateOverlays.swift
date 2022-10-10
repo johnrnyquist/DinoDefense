@@ -24,7 +24,6 @@ class ReadyNode: SKNode {
 
     func show() {
         tapLabel.setScale(0.1)
-
         let actionZoomIn = SKAction.scale(to: 1.0,
                                           duration: 1.0)
         actionZoomIn.timingMode = .easeIn
@@ -42,7 +41,6 @@ class ReadyNode: SKNode {
                                            duration: 1.0)
         actionZoomOut.timingMode = .easeOut
         tapLabel.run(actionZoomOut)
-
         let actionFadeOut = SKAction.fadeAlpha(to: 0.0,
                                                duration: 1.0)
         let actionPop = SKAction.run { () -> Void in

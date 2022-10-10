@@ -31,19 +31,14 @@ class TowerSelectorNode: SKNode {
         // Set the name and icon
         towerIcon.texture = SKTexture(imageNamed: towerType.rawValue)
         towerIcon.name = "Tower_Icon_\(towerType.rawValue)"
-
         // Set the cost
         costLabel.text = "\(towerType.cost)"
-
         self.zRotation = 180.degreesToRadians()
-
         let rotateAction = SKAction.rotate(byAngle: 180.degreesToRadians(),
                                            duration: 0.2)
-
         let moveAction = SKAction.moveBy(x: cos(angle) * 50,
                                          y: sin(angle) * 50,
                                          duration: 0.2)
-
         showAction = SKAction.group([rotateAction, moveAction])
         hideAction = showAction.reversed()
     }

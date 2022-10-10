@@ -13,9 +13,7 @@ class DinosaurPathBehavior: GKBehavior {
     static func pathBehavior(forAgent agent: GKAgent,
                              onPath path: GKPath,
                              avoidingObstacles obstacles: [GKPolygonObstacle]) -> DinosaurPathBehavior {
-
         let behavior = DinosaurPathBehavior()
-
         behavior.setWeight(0.5,
                            for: GKGoal(toReachTargetSpeed: agent.maxSpeed))
         behavior.setWeight(1.0,
@@ -28,7 +26,6 @@ class DinosaurPathBehavior: GKBehavior {
         behavior.setWeight(1.0,
                            for: GKGoal(toStayOn: path,
                                        maxPredictionTime: 0.5))
-
         return behavior
     }
 }

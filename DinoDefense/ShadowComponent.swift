@@ -17,7 +17,6 @@ class ShadowComponent: GKComponent {
     init(size: CGSize,
          offset: CGPoint) {
         self.size = size
-
         node = SKShapeNode(ellipseOf: size)
         node.fillColor = SKColor.black
         node.strokeColor = SKColor.black
@@ -34,15 +33,14 @@ class ShadowComponent: GKComponent {
         let centerX = position.x + node.position.x
         let centerY = position.y + node.position.y
         let left = simd_float2(CGPoint(x: centerX - size.width / 2,
-                                  y: centerY))
+                                       y: centerY))
         let top = simd_float2(CGPoint(x: centerX,
-                                 y: centerY + size.height / 2))
+                                      y: centerY + size.height / 2))
         let right = simd_float2(CGPoint(x: centerX + size.width / 2,
-                                   y: centerY))
+                                        y: centerY))
         let bottom = simd_float2(CGPoint(x: centerX,
-                                    y: centerY - size.height / 2))
+                                         y: centerY - size.height / 2))
         var vertices = [left, bottom, right, top]
-
         let obstacle = GKPolygonObstacle(__points: &vertices,
                                          count: 4)
         return [obstacle]

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f6f6a10-3351-4e6a-b0fb-61b826da125f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinoDefense/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+    <list default="true" id="6f6f6a10-3351-4e6a-b0fb-61b826da125f" name="Default Changelist" comment="Formatting-only commit">
+      <change beforePath="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/AnimationComponent.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/DinosaurEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/DinosaurPathBehavior.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/FiringComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/FiringComponent.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DinoDefense/GameScene.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameScene.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameSceneHelper.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameState.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameState.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameStateOverlays.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/GameViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/GameViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/HealthComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/HealthComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ObstacleEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ProjectileEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/ShadowComponent.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/ShadowComponent.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/TowerEntity.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/TowerSelectorNode.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/Utils.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Utils.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinoDefense/Waves.swift" beforeDir="false" afterPath="$PROJECT_DIR$/DinoDefense/Waves.swift" afterDir="false" />
     </list>
-    <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/DinoDefense-akciauxbrayvyegkeprkmtxozofv/Build/Intermediates.noindex/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,20 +39,7 @@
     <expand />
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_09D67B6C-F760-49F4-A330-7A6931A6E759" />
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DinoDefense/GameScene.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="FindInProjectRecents">
     <findStrings>
       <find>CGPointMake\(([^,]*),([^)]*)\)</find>
@@ -89,11 +87,20 @@
       </list>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="AppCode" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.2" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1420" />
     <option name="height" value="857" />
   </component>
+  <component name="ProjectId" id="2FxNq4rNfGuxvHqA4EeMbBs3bSV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -138,29 +145,23 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.jetbrains.cidr.execution.build.XcodeMessageFilterConfiguration.INFO" value="false" />
-    <property name="com.jetbrains.cidr.execution.build.XcodeMessageFilterConfiguration.NOTE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Swift" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="manualOrder" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="DinoDefense" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DinoDefense" TARGET_NAME="DinoDefense" CONFIG_NAME="Debug" SCHEME_NAME="DinoDefense" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="DinoDefense" RUN_TARGET_NAME="DinoDefense" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -172,6 +173,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6f6f6a10-3351-4e6a-b0fb-61b826da125f" name="Default Changelist" comment="" />
@@ -250,22 +252,22 @@
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>60</line>
+          <line>55</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>283</line>
+          <line>250</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>162</line>
+          <line>149</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/DinoDefense/GameScene.swift</url>
-          <line>144</line>
+          <line>134</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

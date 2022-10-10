@@ -11,6 +11,7 @@ import GameKit
 import AVFoundation
 
 // The names and zPositions of all the key layers in the GameScene
+
 enum GameLayer: CGFloat {
     // The difference in zPosition between all the dinosaurs, towers and obstacles
     static let zDeltaForSprites: CGFloat = 10
@@ -74,19 +75,14 @@ class GameSceneHelper: SKScene {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-
         // No need for gravity
         physicsWorld.gravity = CGVector.zero
-
         // Load the game layers
         loadGameLayers()
-
         // Layout the HUD elements so that they are in the correct position for the screen size
         layoutHUD()
-
         // Load screens for Ready, Win and Lose states
         loadStateScreens()
-
         // Ready
         showReady(show: true)
     }
@@ -101,30 +97,30 @@ class GameSceneHelper: SKScene {
             musicPlayer.volume = 0.5
             musicPlayer.numberOfLoops = -1
             musicPlayer.play()
-        } catch {
+        }
+        catch {
             fatalError("Error loading \(String(describing: musicFileURL)): \(error)")
         }
     }
 
     // Load the Game layers
+
     func loadGameLayers() {
         for gameLayer in GameLayer.allLayers {
             // Find the node in the scene file
             let foundNodes = self[gameLayer.nodeName]
             let layerNode = foundNodes.first!
-
             // Set the zPosition - should be the same as the scene file, but worth setting
             layerNode.zPosition = gameLayer.rawValue
-
             // Store Game layer node
             gameLayerNodes[gameLayer] = layerNode
         }
     }
 
     // Layout the HUD elements to fit the screen
+
     func layoutHUD() {
         let hudNode = gameLayerNodes[.Hud]!
-
         // Position Base Health label
         if let baseLabel = hudNode.childNode(withName: "BaseLabel") as? SKLabelNode {
             self.baseLabel = baseLabel
@@ -132,7 +128,6 @@ class GameSceneHelper: SKScene {
                                               y: (self.size.height - baseLabel.position.y) * sceneScale)
             self.baseLabel.alpha = 0
         }
-
         // Position Wave label
         if let waveLabel = hudNode.childNode(withName: "WaveLabel") as? SKLabelNode {
             self.waveLabel = waveLabel
@@ -140,7 +135,6 @@ class GameSceneHelper: SKScene {
                                               y: (self.size.height - waveLabel.position.y) * sceneScale)
             self.waveLabel.alpha = 0
         }
-
         // Position Gold label
         if let goldLabel = hudNode.childNode(withName: "GoldLabel") as? SKLabelNode {
             self.goldLabel = goldLabel
@@ -151,12 +145,14 @@ class GameSceneHelper: SKScene {
     }
 
     // Update the hud labels
+
     func updateHUD() {
         baseLabel.text = "Lives: \(max(0, baseLives))"
         goldLabel.text = "Gold: \(gold)"
     }
 
     // Load the screens for the Ready, Win and Lose states from their SKS files
+
     func loadStateScreens() {
         // Ready
         let readyScenePath: String = Bundle.main.path(forResource: "ReadyScene",
@@ -165,7 +161,6 @@ class GameSceneHelper: SKScene {
         if let readyScreen = (readyScene.childNode(withName: "MainNode"))!.copy() as? ReadyNode {
             self.readyScreen = readyScreen
         }
-
         // Win
         let winScenePath: String = Bundle.main.path(forResource: "WinScene",
                                                     ofType: "sks")!
@@ -173,7 +168,6 @@ class GameSceneHelper: SKScene {
         if let winScreen = (winScene.childNode(withName: "MainNode"))!.copy() as? WinNode {
             self.winScreen = winScreen
         }
-
         // Lose
         let loseScenePath: String = Bundle.main.path(forResource: "LoseScene",
                                                      ofType: "sks")!
@@ -184,6 +178,7 @@ class GameSceneHelper: SKScene {
     }
 
     // Show the state screens
+
     func showReady(show: Bool) {
         if show {
             updateHUD()
@@ -198,10 +193,8 @@ class GameSceneHelper: SKScene {
     func showWin() {
         // Play the end music
         self.run(winSoundAction)
-
         // Stop the background music
         musicPlayer.pause()
-
         // Show the win screen
         winScreen.alpha = 0.0
         addNode(node: winScreen,
@@ -217,10 +210,8 @@ class GameSceneHelper: SKScene {
     func showLose() {
         // Play the end music
         self.run(loseSoundAction)
-
         // Stop the background music
         musicPlayer.pause()
-
         // Show the lose screen
         loseScreen.alpha = 0.0
         addNode(node: loseScreen,

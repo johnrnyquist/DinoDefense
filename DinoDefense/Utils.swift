@@ -11,6 +11,7 @@ import simd
 import SpriteKit
 
 // MARK: Points and vectors
+
 extension CGPoint {
     init(_ point: simd_float2) {
         self.init(x: CGFloat(point.x),
@@ -32,6 +33,7 @@ extension simd_float2 {
 }
 
 // MARK: Rotate node to face another node
+
 extension SKNode {
     func rotateToFaceNode(targetNode: SKNode,
                           sourceNode: SKNode) {
@@ -46,6 +48,7 @@ extension SKNode {
 }
 
 // MARK: Delay closure
+
 func delay(_ delay: Double,
            closure: @escaping () -> ()) {
     let when = DispatchTime.now() + delay
@@ -54,6 +57,7 @@ func delay(_ delay: Double,
 }
 
 // MARK: Distance between nodes
+
 func distanceBetween(nodeA: SKNode,
                      nodeB: SKNode) -> CGFloat {
     return CGFloat(hypotf(Float(nodeB.position.x - nodeA.position.x),
@@ -61,6 +65,7 @@ func distanceBetween(nodeA: SKNode,
 }
 
 // MARK: Degree and radian extensions
+
 let π = CGFloat(Double.pi)
 
 public extension Int {

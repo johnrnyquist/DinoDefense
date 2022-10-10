@@ -21,10 +21,8 @@ class HealthComponent: GKComponent {
          barWidth: CGFloat,
          barOffset: CGFloat,
          health: Int) {
-
         self.fullHealth = health
         self.health = health
-
         healthBarFullWidth = barWidth
         healthBar = SKShapeNode(rectOf: CGSize(width: healthBarFullWidth,
                                                height: 5),
@@ -34,7 +32,6 @@ class HealthComponent: GKComponent {
         healthBar.position = CGPoint(x: 0,
                                      y: barOffset)
         parentNode.addChild(healthBar)
-
         healthBar.isHidden = true
         super.init()
     }
@@ -46,7 +43,6 @@ class HealthComponent: GKComponent {
     @discardableResult func takeDamage(damage: Int) -> Bool {
         health = max(health - damage,
                      0)
-
         healthBar.isHidden = false
         let healthScale = CGFloat(health) / CGFloat(fullHealth)
         let scaleAction = SKAction.scaleX(to: healthScale,

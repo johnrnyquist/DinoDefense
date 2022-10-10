@@ -16,15 +16,14 @@ class ObstacleEntity: GKEntity {
     var shadowComponent: ShadowComponent!
 
     // 3
+
     init(withNode node: SKSpriteNode) {
         super.init()
-
         // 4
         spriteComponent = SpriteComponent(entity: self,
                                           texture: node.texture!,
                                           size: node.size)
         addComponent(spriteComponent)
-
         // 5
         let shadowSize = CGSize(width: node.size.width * 1.1,
                                 height: node.size.height * 0.6)
@@ -32,7 +31,6 @@ class ObstacleEntity: GKEntity {
                                           offset: CGPoint(x: 0.0,
                                                           y: -node.size.height * 0.35))
         addComponent(shadowComponent)
-
         // 6
         spriteComponent.node.position = node.position
         node.position = CGPoint.zero

@@ -28,7 +28,6 @@ class GameSceneActiveState: GameSceneState {
         // Hide the ready state
         // Ready
         scene.showReady(show: false)
-
         // Start the first wave
         scene.startFirstWave()
     }
