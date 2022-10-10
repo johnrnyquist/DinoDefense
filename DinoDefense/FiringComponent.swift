@@ -33,6 +33,7 @@ class FiringComponent: GKComponent {
 
         timeTillNextShot -= seconds
         if timeTillNextShot > 0 { return }
+        
         timeTillNextShot = towerType.fireRate
 
         // 1

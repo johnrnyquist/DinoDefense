@@ -12,19 +12,19 @@ import SpriteKit
 
 // MARK: Points and vectors
 extension CGPoint {
-    init(_ point: float2) {
+    init(_ point: simd_float2) {
         self.init(x: CGFloat(point.x),
                   y: CGFloat(point.y))
     }
 }
 
-extension float2 {
+extension simd_float2 {
     init(_ point: CGPoint) {
         self.init(x: Float(point.x),
                   y: Float(point.y))
     }
 
-    func distanceTo(point: float2) -> Float {
+    func distanceTo(point: simd_float2) -> Float {
         let xDist = self.x - point.x
         let yDist = self.y - point.y
         return sqrt((xDist * xDist) + (yDist * yDist))

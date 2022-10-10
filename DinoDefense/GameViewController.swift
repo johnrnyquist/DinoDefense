@@ -34,10 +34,6 @@ class GameViewController: UIViewController {
         }
     }
 
-    override var shouldAutorotate: Bool {
-        return super.shouldAutorotate
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

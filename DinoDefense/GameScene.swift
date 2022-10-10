@@ -43,17 +43,14 @@ class GameScene: GameSceneHelper {
 
         startBackgroundMusic()
 
-        let waves = [Wave(dinosaurCount: 5,
-                          dinosaurDelay: 3,
-                          dinosaurType: .TRex), Wave(dinosaurCount: 8,
-                                                     dinosaurDelay: 2,
-                                                     dinosaurType: .Triceratops), Wave(dinosaurCount: 10,
-                                                                                       dinosaurDelay: 2,
-                                                                                       dinosaurType: .TRex), Wave(dinosaurCount: 25,
-                                                                                                                  dinosaurDelay: 1,
-                                                                                                                  dinosaurType: .Triceratops), Wave(dinosaurCount: 1,
-                                                                                                                                                    dinosaurDelay: 1,
-                                                                                                                                                    dinosaurType: .TRexBoss)]
+        let waves = [
+            Wave(dinosaurCount: 5, dinosaurDelay: 3, dinosaurType: .TRex),
+            Wave(dinosaurCount: 8, dinosaurDelay: 2, dinosaurType: .Triceratops),
+            Wave(dinosaurCount: 10, dinosaurDelay: 2, dinosaurType: .TRex),
+            Wave(dinosaurCount: 25, dinosaurDelay: 1, dinosaurType: .Triceratops),
+            Wave(dinosaurCount: 1, dinosaurDelay: 1, dinosaurType: .TRexBoss)
+        ]
+
         waveManager = WaveManager(waves: waves,
                                   newWaveHandler: { waveNum in
                                       self.waveLabel.text = "Wave \(waveNum)/\(waves.count)"

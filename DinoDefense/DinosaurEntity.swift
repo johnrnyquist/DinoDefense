@@ -119,7 +119,7 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
     }
 
     func agentWillUpdate(_ agent: GKAgent) {
-        self.agent!.position = float2(x: Float(spriteComponent.node.position.x),
+        self.agent!.position = simd_float2(x: Float(spriteComponent.node.position.x),
                                       y: Float(spriteComponent.node.position.y))
     }
 
@@ -149,7 +149,6 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
 
     func slowed(slowFactor: Float) {
         hasBeenSlowed = true
-
         animationComponent.node.color = SKColor.cyan
         animationComponent.node.colorBlendFactor = 1.0
         switch dinosaurType {
@@ -175,7 +174,6 @@ class DinosaurEntity: GKEntity, GKAgentDelegate {
                                                       withImageIdentifier: "Dead",
                                                       forAnimationState: .Dead,
                                                       repeatTexturesForever: false)
-
         return animations
     }
 }

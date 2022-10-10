@@ -33,13 +33,13 @@ class ShadowComponent: GKComponent {
     func createObstaclesAtPosition(position: CGPoint) -> [GKPolygonObstacle] {
         let centerX = position.x + node.position.x
         let centerY = position.y + node.position.y
-        let left = float2(CGPoint(x: centerX - size.width / 2,
+        let left = simd_float2(CGPoint(x: centerX - size.width / 2,
                                   y: centerY))
-        let top = float2(CGPoint(x: centerX,
+        let top = simd_float2(CGPoint(x: centerX,
                                  y: centerY + size.height / 2))
-        let right = float2(CGPoint(x: centerX + size.width / 2,
+        let right = simd_float2(CGPoint(x: centerX + size.width / 2,
                                    y: centerY))
-        let bottom = float2(CGPoint(x: centerX,
+        let bottom = simd_float2(CGPoint(x: centerX,
                                     y: centerY - size.height / 2))
         var vertices = [left, bottom, right, top]
 
